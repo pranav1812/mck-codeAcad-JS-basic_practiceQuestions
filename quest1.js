@@ -16,7 +16,7 @@ const getLargestEvenArrow= (arr)=> {
     return arr.reduce((a, b)=> a>b? a: b)
 }
 
-function getLargestEvenStandard(arr) {
+function getLargestEvenRegular(arr) {
     // check if arr is an array
     if (!Array.isArray(arr)) return -1
 
@@ -36,5 +36,5 @@ function getLargestEvenStandard(arr) {
 
 module.exports= {
     getLargestEvenArrow,
-    getLargestEvenStandard
+    getLargestEvenRegular
 }
