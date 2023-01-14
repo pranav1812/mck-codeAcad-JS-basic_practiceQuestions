@@ -6,10 +6,12 @@ const _changeCapitalization= (chr)=> {
     return chr.toUpperCase();
 }
 const changeCapitalizationArrow= (str)=> {
+    if (typeof str!== "string") return -1
     return str.split('').map(chr=> _changeCapitalization(chr)).join('');
 }
 
 function changeCapitalizationRegular(str) {
+    if (typeof str!== "string") return -1
     return str.split('').map(chr=> _changeCapitalization(chr)).join('');
 }
 

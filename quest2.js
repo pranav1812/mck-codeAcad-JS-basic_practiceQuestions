@@ -1,25 +1,29 @@
 const checkEqualDigitsArrow= (num)=> {
+    if (typeof num!== "number") return false
     let digit= num% 10;
-    num%= 10;
+    num= Math.floor(num/ 10);
     while (num> 0) {
         temp= num% 10;
+        // console.log(temp, digit, num)
         if (temp!= digit) return false;
-        num%= 10;
+        num= Math.floor(num/ 10);
     }
-    return false
+    return true
 }
 
 function checkEqualDigitsRegular(num) {
+    if (typeof num!== "number") return false
     let digit= num% 10;
-    num%= 10;
+    num= Math.floor(num/ 10);
     while (num> 0) {
         temp= num% 10;
         if (temp!= digit) return false;
-        num%= 10;
+        num= Math.floor(num/ 10);
     }
-    return false
+    return true
 }
 
+console.log(checkEqualDigitsArrow(111));
 module.exports= {
     checkEqualDigitsArrow,
     checkEqualDigitsRegular
